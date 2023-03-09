@@ -4,33 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator Yo</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Password Generator v3.14</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
+
   <body>
-    <div class="wrapper">
+    <!-- Main Wrapper -->
+    <main class="wrapper">
+
+      <!-- Header -->
       <header>
-        <h1>OpSec Password Generator</h1>
+        <h1>OpSec Password Generator
+</h1>
       </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Random Password</h2>
-        </div>
-        <div class="card-body">
+
+      <div>
+          <img src="./assets/img/icon.png" alt="keyImg" id="keyImg" />
+        </a>
+      </div> 
+
+      <!-- Primary Card Container -->
+      <section class="card">
+
+        <!-- Card Header -->
+        <section class="card-header">
+          <h2>
+
+Generate a Random Password
+</h2>
+        </section>
+
+        <!-- Parent Container & Pass Text -->
+        <section class="card-body">
           <textarea
             readonly
             id="password"
             placeholder="Your Secure Password"
             aria-label="Generated Password"
+            onclick="writePassword()"
           ></textarea>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
-        </div>
-      </div>
-    </div>
+        </section>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="script.js"></script>
+        <!-- Card Footer & Generate Password Button -->
+        <section class="card-footer">
+          <button id="generate" class="btn"><span>Generate Password</span></button>
+          <button class="btn" onclick="copyPass()">Add To Clipboard</button>
+        </section>
+
+      </section>
+    </main>
+
+    <script src="./assets/js/script.js"></script>
   </body>
+
+<footer>Copyright JM Cabrera Elias 2023</footer>
 </html>
